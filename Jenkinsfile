@@ -18,6 +18,7 @@ pipeline {
                     sh 'env'
                     sh 'docker --version'
                     sh 'docker ps'
+                    echo "Branch name is: ${env.branchName}"
                 }
             }
         }
