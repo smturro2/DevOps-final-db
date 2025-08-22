@@ -10,12 +10,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // todo
+                echo "todo"
             }
         }
         stage('Test') {
             steps {
-                // todo
+                echo "todo"
             }
         }
         stage('Security Scan') {
