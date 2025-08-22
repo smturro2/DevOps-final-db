@@ -18,7 +18,7 @@ pipeline {
                     sh 'env'
                     sh 'docker --version'
                     sh 'docker ps'
-                    echo "Branch name is: ${env.branchName}"
+                    echo "Branch name is: ${env.BRANCH_NAME}"
                 }
             }
         }
@@ -67,14 +67,9 @@ pipeline {
             steps {
                 script {
                     utils.conditionalDeployment(
-                        'feature/new-feature'
+                        env.BRANCH_NAME
                     )
-
-                    // utils.conditionalDeployment(
-                    //     env.branchName
-                    // )
                 }
-                // echo "todo"
             }
         }
     }
