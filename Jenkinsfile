@@ -11,6 +11,7 @@ pipeline {
     }
 
     stages {
+        // todo remove
         stage('Debug') {
             steps {
                 script {
@@ -71,6 +72,12 @@ pipeline {
                     )
                 }
             }
+        }
+    }
+
+    post {
+        always {
+            sh 'docker logout'
         }
     }
 }
