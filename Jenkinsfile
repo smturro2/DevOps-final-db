@@ -5,7 +5,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials("dockerhub")
         DOCKER_REGISTRY = "denture8278"
         DOCKER_NAME = "devops-final-db"
-        DOCKER_HOST = 'unix:///var/run/docker.sock'
+        // DOCKER_HOST = 'unix:///var/run/docker.sock'
         // DOCKER_TAG = "${env.BUILD_NUMBER}"  // todo
         DOCKER_TAG = "v1.1"
     }
