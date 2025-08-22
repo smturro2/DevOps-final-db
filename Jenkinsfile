@@ -66,8 +66,12 @@ pipeline {
             steps {
                 script {
                     utils.conditionalDeployment(
-                        env.branchName
+                        'feature/new-feature'
                     )
+
+                    // utils.conditionalDeployment(
+                    //     env.branchName
+                    // )
                 }
                 // echo "todo"
             }
