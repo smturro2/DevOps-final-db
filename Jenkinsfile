@@ -10,6 +10,15 @@ pipeline {
     }
 
     stages {
+        stage('Debug') {
+            steps {
+                script {
+                    sh 'env'
+                    sh 'docker --version'
+                    sh 'docker ps'
+                }
+            }
+        }
         stage('Build') {
             steps {
                 echo "todo"
