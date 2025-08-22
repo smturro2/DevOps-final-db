@@ -64,12 +64,12 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                // script {
-                //     utils.conditionalDeployment(
-                //         env.branchName
-                //     )
-                // }
-                echo "todo"
+                script {
+                    utils.conditionalDeployment(
+                        env.branchName
+                    )
+                }
+                // echo "todo"
             }
         }
     }
